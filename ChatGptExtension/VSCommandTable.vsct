@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Extern href="sharedids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+  <Include href="VSGlobals.vsct"/>
+
+  <Commands package="ChatGptExtension">
+	  <Groups>
+		  <Group guid="ChatGptExtension" id="MenuEditorGroup" priority="0x0600">
+			  <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
+		  </Group>
+		  <Group guid="ChatGptExtension" id="MenuViewGroup" priority="0x0700">
+			  <Parent guid="VSMainMenu" id="View" />
+		  </Group>
+	  </Groups>
+
+	  <Menus>
+		  <Menu guid="ChatGptExtension" id="EditorMenu" priority="0x0100" type="Menu">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup"/>
+			  <CommandFlag>DynamicVisibility</CommandFlag>
+			  <Strings>
+				  <CommandName>My Menu</CommandName>
+				  <ButtonText>My Menu</ButtonText>
+			  </Strings>
+		  </Menu>
+	  </Menus>
+
+	  <Buttons>
+		  <Button guid="ChatGptExtension" id="AddTestButtonCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT: Add Tests</ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.AddTestButtonCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+		  <Button guid="ChatGptExtension" id="FindBugsButtonCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT: Find Bugs</ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.FindBugsButtonCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+		  <Button guid="ChatGptExtension" id="OptimizeButtonCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT: Optimize</ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.OptimizeButtonCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+		  <Button guid="ChatGptExtension" id="ExplainButtonCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT: Explain</ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.ExplainButtonCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+		  <Button guid="ChatGptExtension" id="CompleteCodeButtonCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuEditorGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT: Complete Code</ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.CompleteCodeButtonCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+		  <Button guid="ChatGptExtension" id="ShowChatWindowCommand" priority="0x0100" type="Button">
+			  <Parent guid="ChatGptExtension" id="MenuViewGroup" />
+			  <CommandFlag>TextChanges</CommandFlag>
+			  <Strings>
+				  <ButtonText> ChatGPT </ButtonText>
+				  <LocCanonicalName>.ChatGptExtension.ShowChatWindowCommand</LocCanonicalName>
+			  </Strings>
+		  </Button>
+	  </Buttons>
+  </Commands>
+  <Symbols>
+	  <GuidSymbol name="ChatGptExtension" value="{12d172ad-2637-4896-b5bc-e7ae1397b278}">
+		  <IDSymbol name="MenuEditorGroup" value="0x0001" />
+		  <IDSymbol name="MenuViewGroup" value="0x0002" />
+		  <IDSymbol name="EditorMenu" value="0x1030" />
+		  <IDSymbol name="AddTestButtonCommand" value="0x0100" />
+		  <IDSymbol name="FindBugsButtonCommand" value="0x0200" />
+		  <IDSymbol name="OptimizeButtonCommand" value="0x0300" />
+		  <IDSymbol name="ExplainButtonCommand" value="0x0400" />
+		  <IDSymbol name="CompleteCodeButtonCommand" value="0x0500" />
+		  <IDSymbol name="ShowChatWindowCommand" value="0x0600" />
+	  </GuidSymbol>
+  </Symbols>
+</CommandTable>
