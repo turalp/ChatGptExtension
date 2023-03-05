@@ -23,6 +23,7 @@ namespace ChatGptExtension
     {
         protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)
         {
+            this.RegisterToolWindows();
             await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
             
             await AddTestButtonCommand.InitializeAsync(this);

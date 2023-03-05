@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:toolkit="clr-namespace:Community.VisualStudio.Toolkit;assembly=Community.VisualStudio.Toolkit"
+             xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
              mc:Ignorable="d"
              toolkit:Themes.UseVsTheme="True"
              d:DesignHeight="300" d:DesignWidth="300"
@@ -23,5 +24,6 @@
         <Button x:Name="buttonApi" Margin="5" Grid.Row="0" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" >
             <Image Source="../Resources/chat-gpt-next.ico" Width="10" Height="10"></Image>
         </Button>
+        <wpf:WebView2 x:Name="chatWebView" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"></wpf:WebView2>
     </Grid>
 </UserControl>
