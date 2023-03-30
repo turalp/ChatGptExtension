@@ -7,23 +7,24 @@
              xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
              mc:Ignorable="d"
              toolkit:Themes.UseVsTheme="True"
-             d:DesignHeight="300" d:DesignWidth="300"
              Name="ChatToolWindow">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="0.5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0">Provide API key:</Label>
-        <TextBox Margin="5" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch">API key</TextBox>
-        <Button x:Name="buttonApi" Margin="5" Grid.Row="0" Grid.Column="2" Background="{x:Null}" BorderBrush="{x:Null}" >
-            <Image Source="../Resources/chat-gpt-next.ico" Width="10" Height="10"></Image>
+        <TextBox Margin="5" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center">Provide API key</TextBox>
+        <Button x:Name="buttonApi" Margin="5" Grid.Row="0" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" >
+            <Image Source="../Resources/chat-gpt-next.ico" Width="10" Height="10" HorizontalAlignment="Left" VerticalAlignment="Center"></Image>
         </Button>
-        <wpf:WebView2 x:Name="chatWebView" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"></wpf:WebView2>
+        <wpf:WebView2 
+            x:Name="chatWebView"
+            Grid.Column="0" 
+            Grid.ColumnSpan="2" 
+            CoreWebView2InitializationCompleted="chatWebView_CoreWebView2InitializationCompleted" Grid.Row="1"/>
     </Grid>
 </UserControl>

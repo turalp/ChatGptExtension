@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="chat.extension.css" />
-        <script src="chat.extension.js"></script>
-    </head>
-    <body>
-        <div class="chat-container">
-            <div class="chat">
-                <p class="message">Hello, how can I help you today?</p>
-            </div>
-            <form class="message-form">
-                <textarea placeholder="Type your message here"></textarea>
-                <div class="button-container">
-                    <button class="button">...</button>
-                    <button class="button send-button">Send</button>
-                </div>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.extension.css">
+    <script defer src="chat.extension.js"></script>
+    <title>ChatGPT Extension</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-window" id="chat-window">
+            <!-- Messages will be appended here -->
         </div>
-    </body>
+        <form class="message-form" id="message-form">
+            <input type="text" class="message-input" id="message-input" placeholder="Type your message here..." autocomplete="off">
+            <button type="submit" class="send-button">Send</button>
+        </form>
+    </div>
+</body>
 </html>

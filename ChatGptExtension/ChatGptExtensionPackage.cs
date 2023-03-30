@@ -4,20 +4,15 @@ global using System;
 global using Task = System.Threading.Tasks.Task;
 using ChatGptExtension.Commands;
 using ChatGptExtension.WIndows;
-using EnvDTE80;
-using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Threading;
-using System.Windows.Documents;
-using System.Windows.Input;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ChatGptExtension
 {
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [InstalledProductRegistration(Vsix.Name, Vsix.Description, Vsix.Version)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [ProvideToolWindow(typeof(ChatToolWindow.ChatPane))]
+    [ProvideToolWindow(typeof(ChatToolWindow.ChatPane), Style = VsDockStyle.Tabbed, Window = WindowGuids.DocumentWell)]
     [Guid(PackageGuids.ChatGptExtensionString)]
     public sealed class ChatGptExtensionPackage : ToolkitPackage
     {

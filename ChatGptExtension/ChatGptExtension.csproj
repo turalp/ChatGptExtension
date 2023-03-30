@@ -71,18 +71,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="View\chat.extension.css" />
-    <Content Include="View\chat.extension.html" />
-    <Content Include="View\chat.extension.js" />
+    <Content Include="View\chat.extension.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="View\chat.extension.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="View\chat.extension.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
       <Generator>VsixManifestGenerator</Generator>
       <LastGenOutput>source.extension.cs</LastGenOutput>
     </None>
-    <Content Include="Resources\chat-gpt-next.ico">
+    <Resource Include="Resources\chat-gpt-next.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\chat-gpt.ico">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\chat-gpt.ico" />
     <Content Include="Resources\Icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
