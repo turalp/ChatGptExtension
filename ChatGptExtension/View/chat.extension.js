@@ -11,11 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         appendMessage(messageText, 'user');
         messageInput.value = '';
-
-        // Simulate ChatGPT response
-        setTimeout(() => {
-            appendMessage(`You said: ${messageText}`, 'gpt');
-        }, 1000);
     });
 
     function appendMessage(text, sender) {

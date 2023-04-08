@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChatGptExtension.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ChatGptApiKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OpenAIUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://api.openai.com/v1/engines/davinci-codex/completions</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
